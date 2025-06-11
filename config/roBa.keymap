@@ -75,8 +75,8 @@
         FUNCTION {
             bindings = <
 &kp LS(LG(E))     &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))  &kp DELETE                      &kp F2    &kp F4    &kp F12   &trans     &trans
-&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))      &kp LEFT_SHIFT         &kp BACKSPACE          &kp ENTER   &trans      &trans  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans
-&kp LC(LG(UP))    &trans                 &trans                 &trans                 &trans      &trans      &trans  &trans    &kp END   &kp HOME  &trans     &trans
+&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))      &kp LG(SPACE)          &kp BACKSPACE          &kp ENTER   &trans      &trans  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans
+&kp LC(LG(UP))    &trans                 &trans                 &kp LEFT_SHIFT         &trans      &trans      &trans  &trans    &kp END   &kp HOME  &trans     &trans
 &trans            &trans                 &trans                 &mo 6                  &trans      &trans      &trans  &mo 3                                    &trans
             >;
         };
