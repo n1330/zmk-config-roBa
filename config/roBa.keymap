@@ -92,13 +92,11 @@
 
         NUM2 {
             bindings = <
-&trans    &trans     &trans      &trans        &trans                            &trans         &trans     &trans         &trans        &trans
-&kp BSLH  &kp GRAVE  &kp LS(AT)  &kp LS(LBRC)  &kp LS(RBRC)  &trans      &trans  &kp LS(PRCNT)  &kp EQUAL  &kp LS(TILDE)  &kp LS(AMPS)  &kp LS(PIPE)
-&trans    &trans     &trans      &trans        &trans        &trans      &trans  &trans         &trans     &trans         &trans        &trans
-&trans    &trans     &trans      &trans        &trans        &trans      &trans  &trans                                                 &trans
+&trans    &trans     &trans      &trans        &trans                            &trans  &trans  &trans         &trans        &trans
+&kp BSLH  &kp GRAVE  &kp LS(AT)  &kp LS(LBRC)  &kp LS(RBRC)  &trans      &trans  &trans  &trans  &kp LS(TILDE)  &kp LS(AMPS)  &kp LS(PIPE)
+&trans    &trans     &trans      &trans        &trans        &trans      &trans  &trans  &trans  &trans         &trans        &trans
+&trans    &trans     &trans      &trans        &trans        &trans      &trans  &trans                                       &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
