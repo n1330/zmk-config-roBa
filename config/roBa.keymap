@@ -12,9 +12,14 @@
     combos {
         compatible = "zmk,combos";
 
-        Scroll {
+        Scroll2 {
             bindings = <&mo 5>;
             key-positions = <31 32>;
+        };
+
+        Scroll {
+            bindings = <&mo 5>;
+            key-positions = <19 20>;
         };
     };
 
