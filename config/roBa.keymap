@@ -23,15 +23,47 @@
         };
     };
 
+    macros {
+        EISU_ESC: EISU_ESC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2 &kp ESC>;
+            label = "EISU_ESC";
+        };
+    };
+
+    behaviors {
+        MOD_EISU_ESC: MOD_EISU_ESC {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_EISU_ESC";
+            bindings = <&kp>, <&EISU_ESC>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        LAYER_TAP: LAYER_TAP {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q    &kp W         &kp F             &kp P                &kp B                                                     &kp J        &kp L  &kp U      &kp Y       &kp SEMICOLON
-&kp A    &kp R         &kp S             &kp T                &kp G        &kp LS(LG(S))      &kp MINUS                 &kp M        &kp N  &lt 4 E    &kp I       &kp O
-&kp Z    &kp X         &kp C             &kp D                &kp V        &mo 4              &kp RIGHT_GUI             &kp K        &kp H  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp ESC  &kp LEFT_WIN  &mt LEFT_ALT ESC  &mt LCMD LANGUAGE_2  &lt 1 SPACE  &mt LCTRL TAB      &mt LEFT_SHIFT BACKSPACE  &lt 2 ENTER                                &kp DEL
+&kp Q    &kp W         &kp F                     &kp P                &kp B                                                     &kp J        &kp L  &kp U           &kp Y       &kp SEMICOLON
+&kp A    &kp R         &kp S                     &kp T                &kp G        &kp LS(LG(S))      &kp MINUS                 &kp M        &kp N  &LAYER_TAP 4 E  &kp I       &kp O
+&kp Z    &kp X         &kp C                     &kp D                &kp V        &mo 4              &kp RIGHT_GUI             &kp K        &kp H  &kp COMMA       &kp PERIOD  &kp SLASH
+&kp ESC  &kp LEFT_WIN  &MOD_EISU_ESC LEFT_ALT 0  &mt LCMD LANGUAGE_2  &lt 1 SPACE  &mt LCTRL TAB      &mt LEFT_SHIFT BACKSPACE  &lt 2 ENTER                                     &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>;
