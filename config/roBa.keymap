@@ -118,10 +118,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans         &trans                  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans         &LAYER_MTAP_HOLD 5 MB2  &mkp MB3
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &kp C_AC_BACK  &kp C_AC_FORWARD        &none
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans                &trans                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans                &LAYER_MTAP_HOLD 5 MB2  &mkp MB3
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)   &none
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                          &trans
             >;
         };
 
