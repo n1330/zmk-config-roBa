@@ -19,11 +19,6 @@
             bindings = <&mkp MB3>;
             key-positions = <31 32>;
         };
-
-        test {
-            bindings = <&none>;
-            key-positions = <18 20 21>;
-        };
     };
 
     macros {
