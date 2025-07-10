@@ -86,8 +86,8 @@
         default_layer {
             bindings = <
 &kp Q    &kp W         &kp E                     &kp R                &kp T                                                                &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A    &kp S         &kp D                     &kp F                &kp G        &kp LS(LG(S))       &kp MINUS                           &kp H        &kp J  &kp K      &kp L       &MOD_TAP_HOLD SEMI RCMD
-&kp Z    &kp X         &kp C                     &kp V                &kp B        &kp LEFT_SHIFT      &kp RIGHT_GUI                       &kp N        &kp M  &kp COMMA  &kp PERIOD  &MOD_TAP_HOLD SLASH RIGHT_ALT
+&kp A    &kp S         &kp D                     &kp F                &kp G        &kp LS(LG(S))       &kp MINUS                           &kp H        &kp J  &kp K      &kp L       &MOD_TAP_HOLD RCMD SEMI
+&kp Z    &kp X         &kp C                     &kp V                &kp B        &kp LEFT_SHIFT      &kp RIGHT_GUI                       &kp N        &kp M  &kp COMMA  &kp PERIOD  &MOD_TAP_HOLD RIGHT_ALT SLASH
 &kp ESC  &kp LEFT_WIN  &MOD_EISU_ESC LEFT_ALT 0  &mt LCMD LANGUAGE_2  &lt 1 SPACE  &mt LCTRL TAB       &MOD_TAP_HOLD LEFT_SHIFT BACKSPACE  &lt 2 ENTER                                &kp DEL
             >;
 
