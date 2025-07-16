@@ -98,13 +98,6 @@
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
         };
-
-        CMD_DANCE_EISU_KANA: CMD_DANCE_EISU_KANA {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CMD_LANG";
-            #binding-cells = <0>;
-            bindings = <&mt LCMD LANGUAGE_2>, <&kp LANGUAGE_1>;
-        };
     };
 
     keymap {
@@ -112,10 +105,10 @@
 
         default_layer {
             bindings = <
-&kp Q                 &kp W                     &kp E                     &kp R                 &kp T                                                                        &kp Y                    &kp U  &kp I                      &kp O                           &kp P
-&kp A                 &kp S                     &kp D                     &kp F                 &kp G                    &kp LS(LG(S))       &kp MINUS                       &kp H                    &kp J  &kp K                      &kp L                           &kp SEMI
-&MOD_TAP_HOLD LCMD Z  &MOD_TAP_HOLD LEFT_ALT X  &MOD_TAP_HOLD LCTRL C     &kp V                 &kp B                    &kp LEFT_SHIFT      &kp RIGHT_GUI                   &kp N                    &kp M  &MOD_TAP_HOLD RCTRL COMMA  &MOD_TAP_HOLD RIGHT_ALT PERIOD  &MOD_TAP_HOLD RCMD SLASH
-&kp ESC               &kp LEFT_WIN              &MOD_EISU_ESC LEFT_ALT 0  &CMD_DANCE_EISU_KANA  &LAYER_TAP_HOLD 1 SPACE  &mt LSHIFT TAB      &MOD_TAP_HOLD RSHIFT BACKSPACE  &LAYER_TAP_HOLD 2 ENTER                                                                    &kp DEL
+&kp Q                 &kp W                     &kp E                     &kp R                          &kp T                                                                        &kp Y                    &kp U  &kp I                      &kp O                           &kp P
+&kp A                 &kp S                     &kp D                     &kp F                          &kp G                    &kp LS(LG(S))       &kp MINUS                       &kp H                    &kp J  &kp K                      &kp L                           &kp SEMI
+&MOD_TAP_HOLD LCMD Z  &MOD_TAP_HOLD LEFT_ALT X  &MOD_TAP_HOLD LCTRL C     &kp V                          &kp B                    &kp LEFT_SHIFT      &kp RIGHT_GUI                   &kp N                    &kp M  &MOD_TAP_HOLD RCTRL COMMA  &MOD_TAP_HOLD RIGHT_ALT PERIOD  &MOD_TAP_HOLD RCMD SLASH
+&kp ESC               &kp LEFT_WIN              &MOD_EISU_ESC LEFT_ALT 0  &MOD_TAP_HOLD LCMD LANGUAGE_2  &LAYER_TAP_HOLD 1 SPACE  &mt LSHIFT TAB      &MOD_TAP_HOLD RSHIFT BACKSPACE  &LAYER_TAP_HOLD 2 ENTER                                                                    &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
