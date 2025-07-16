@@ -68,28 +68,6 @@
             flavor = "tap-preferred";
         };
 
-        LAYER_TAP_HOLD: LAYER_TAP_HOLD {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_HOLD";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "tap-preferred";
-        };
-
-        MOD_TAP_HOLD: MOD_TAP_HOLD {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP_HOLD";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "tap-preferred";
-        };
-
         LAYER_MTAP_HOLD: LAYER_MTAP_HOLD {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_MTAP_HOLD";
@@ -116,10 +94,10 @@
 
         default_layer {
             bindings = <
-&kp Q                  &kp W                 &kp E                     &kp R                 &kp T                                                  &kp Y        &kp U  &kp I                          &kp O                      &kp P
-&kp A                  &kp S                 &kp D                     &kp F                 &kp G        &kp LS(LG(S))       &kp MINUS             &kp H        &kp J  &kp K                          &kp L                      &kp SEMI
-&MOD_TAP_HOLD LCTRL Z  &MOD_TAP_HOLD LCMD X  &MOD_TAP_HOLD LEFT_ALT C  &kp V                 &kp B        &kp LEFT_SHIFT      &kp RIGHT_GUI         &kp N        &kp M  &MOD_TAP_HOLD RIGHT_ALT COMMA  &MOD_TAP_HOLD RCMD PERIOD  &MOD_TAP_HOLD RCTRL SLASH
-&kp ESC                &kp LEFT_WIN          &MOD_EISU_ESC LCMD 0      &mt LCTRL LANGUAGE_2  &lt 1 SPACE  &mt LSHIFT TAB      &mt RSHIFT BACKSPACE  &lt 2 ENTER                                                                   &kp DEL
+&kp Q       &kp W           &kp E                  &kp R                &kp T                                                  &kp Y        &kp U  &kp I            &kp O                 &kp P
+&kp A       &kp S           &kp D                  &kp F                &kp G        &kp LS(LG(S))       &kp MINUS             &kp H        &kp J  &kp K            &kp L                 &kp SEMI
+&mt LCMD Z  &mt LEFT_ALT X  &mt LCTRL C            &kp V                &kp B        &kp LEFT_SHIFT      &kp RIGHT_GUI         &kp N        &kp M  &mt RCTRL COMMA  &mt RIGHT_ALT PERIOD  &mt RCMD SLASH
+&kp ESC     &kp LEFT_WIN    &MOD_EISU_ESC LCTRL 0  &mt LCMD LANGUAGE_2  &lt 1 SPACE  &mt LSHIFT TAB      &mt RSHIFT BACKSPACE  &lt 2 ENTER                                                &kp DEL
             >;
 
             sensor-bindings = <&MSC_ROTATE SCRL_UP SCRL_DOWN>;
@@ -127,10 +105,10 @@
 
         FUNCTION {
             bindings = <
-&kp LS(LG(E))     &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))  &kp DELETE                                                &kp F2       &kp F4    &kp F12   &trans     &trans
-&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))      &kp LG(SPACE)          &kp BACKSPACE          &kp ENTER   &trans      &trans                            &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &kp LC(UP)
-&kp LC(LG(UP))    &trans                 &trans                 &kp LEFT_SHIFT         &trans      &trans      &trans                            &trans       &kp END   &kp HOME  &trans     &kp LC(DOWN)
-&trans            &trans                 &trans                 &mo 6                  &trans      &trans      &MOD_TAP_HOLD RIGHT_SHIFT DELETE  &lt 3 ENTER                                 &trans
+&kp LS(LG(E))     &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))  &kp DELETE                                      &kp F2       &kp F4    &kp F12   &trans     &trans
+&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))      &kp LG(SPACE)          &kp BACKSPACE          &kp ENTER   &trans      &trans                  &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &kp LC(UP)
+&kp LC(LG(UP))    &trans                 &trans                 &kp LEFT_SHIFT         &trans      &trans      &trans                  &trans       &kp END   &kp HOME  &trans     &kp LC(DOWN)
+&trans            &trans                 &trans                 &mo 6                  &trans      &trans      &mt RIGHT_SHIFT DELETE  &lt 3 ENTER                                 &trans
             >;
         };
 
@@ -190,10 +168,10 @@
 
         Colemak {
             bindings = <
-&kp Q    &kp W         &kp F                     &kp P                &kp B                                                               &kp J        &kp L  &kp U      &kp Y       &kp SEMICOLON
-&kp A    &kp R         &kp S                     &kp T                &kp G        &kp LS(LG(S))      &kp MINUS                           &kp M        &kp N  &kp E      &kp I       &kp O
-&kp Z    &kp X         &kp C                     &kp D                &kp V        &mo 4              &kp RIGHT_GUI                       &kp K        &kp H  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp ESC  &kp LEFT_WIN  &MOD_EISU_ESC LEFT_ALT 0  &mt LCMD LANGUAGE_2  &lt 2 SPACE  &mt LCTRL TAB      &MOD_TAP_HOLD LEFT_SHIFT BACKSPACE  &lt 8 ENTER                                &kp DEL
+&kp Q    &kp W         &kp F                     &kp P                &kp B                                                     &kp J        &kp L  &kp U      &kp Y       &kp SEMICOLON
+&kp A    &kp R         &kp S                     &kp T                &kp G        &kp LS(LG(S))      &kp MINUS                 &kp M        &kp N  &kp E      &kp I       &kp O
+&kp Z    &kp X         &kp C                     &kp D                &kp V        &mo 4              &kp RIGHT_GUI             &kp K        &kp H  &kp COMMA  &kp PERIOD  &kp SLASH
+&kp ESC  &kp LEFT_WIN  &MOD_EISU_ESC LEFT_ALT 0  &mt LCMD LANGUAGE_2  &lt 2 SPACE  &mt LCTRL TAB      &mt LEFT_SHIFT BACKSPACE  &lt 8 ENTER                                &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>;
