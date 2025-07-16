@@ -28,6 +28,7 @@
         27
         28
     >;
+    require-prior-idle-ms = <200>;
 };
 
 / {
