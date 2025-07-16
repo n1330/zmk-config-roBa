@@ -4,8 +4,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
-
 &mt {
     flavor = "tap-preferred";
     quick-tap-ms = <175>;
@@ -70,7 +68,7 @@
             flavor = "tap-preferred";
         };
 
-        LAYER_MTAP_HOLD: LAYER_MTAP_HOLD {
+        LMT: LAYER_MTAP_HOLD {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_MTAP_HOLD";
             bindings = <&mo>, <&mkp>;
@@ -81,13 +79,11 @@
             flavor = "tap-preferred";
         };
 
-        MSC_ROTATE: MSC_ROTATE {
+        ENC_MOUSE: ENCODER_MOUSE {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "MSC_ROTATE";
+            label = "ENCODER_MOUSE";
             #sensor-binding-cells = <0>;
-            bindings = <&msc>, <&msc>;
-
-            tap-ms = <20>;
+            bindings = <&msc MOVE_DOWN>, <&msc MOVE_UP>;
         };
     };
 
@@ -102,7 +98,7 @@
 &kp ESC     &kp LEFT_WIN    &MOD_EISU_ESC LCTRL 0  &mt LCMD LANGUAGE_2  &lt 1 SPACE  &mt LSHIFT TAB      &mt RSHIFT BACKSPACE  &lt 2 ENTER                                                &kp DEL
             >;
 
-            sensor-bindings = <&MSC_ROTATE SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&ENC_MOUSE>;
         };
 
         FUNCTION {
@@ -183,7 +179,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans                  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans                  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &LAYER_MTAP_HOLD 5 MB2  &mkp MB3
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &LMT 5 MB2  &mkp MB3
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                            &trans
             >;
         };
