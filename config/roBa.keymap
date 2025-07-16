@@ -15,6 +15,16 @@
     combos {
         compatible = "zmk,combos";
 
+        rclk {
+            bindings = <&mkp MB2>;
+            key-positions = <19 20>;
+        };
+
+        mclk {
+            bindings = <&mkp MB3>;
+            key-positions = <18 19>;
+        };
+
         Back {
             bindings = <&kp LG(LEFT_BRACKET)>;
             key-positions = <31 32>;
@@ -27,19 +37,7 @@
 
         esc {
             bindings = <&EISU_ESC>;
-            key-positions = <12 13>;
-        };
-
-        rclk {
-            bindings = <&mkp MB2>;
-            key-positions = <19 20>;
-            layers = <4>;
-        };
-
-        mclk {
-            bindings = <&mkp MB3>;
-            key-positions = <18 19>;
-            layers = <4>;
+            key-positions = <11 12>;
         };
 
         tab {
