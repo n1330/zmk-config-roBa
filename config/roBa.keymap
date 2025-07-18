@@ -86,6 +86,7 @@
             label = "ENCODER_MOUSE";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -95,10 +96,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W           &kp E                  &kp R                &kp T                                                  &kp Y        &kp U  &kp I            &kp O                 &kp P
-&kp A       &kp S           &kp D                  &kp F                &kp G        &kp LS(LG(S))       &kp MINUS             &kp H        &kp J  &kp K            &kp L                 &kp SEMI
-&mt LCMD Z  &mt LEFT_ALT X  &mt LCTRL C            &kp V                &kp B        &kp LEFT_SHIFT      &kp RIGHT_GUI         &kp N        &kp M  &mt RCTRL COMMA  &mt RIGHT_ALT PERIOD  &mt RCMD SLASH
-&kp ESC     &kp LEFT_WIN    &MOD_EISU_ESC LCTRL 0  &mt LCMD LANGUAGE_2  &lt 1 SPACE  &mt LSHIFT TAB      &mt RSHIFT BACKSPACE  &lt 2 ENTER                                                &kp DEL
+&kp Q             &kp W           &kp E                     &kp R                &kp T                                                  &kp Y        &kp U  &kp I            &kp O                 &kp P
+&kp A             &kp S           &kp D                     &kp F                &kp G        &kp LS(LG(S))       &kp MINUS             &kp H        &kp J  &kp K            &kp L                 &kp SEMI
+&mt LEFT_SHIFT Z  &mt LEFT_ALT X  &mt LCTRL C               &kp V                &kp B        &kp LEFT_SHIFT      &kp RIGHT_GUI         &kp N        &kp M  &mt RCTRL COMMA  &mt RIGHT_ALT PERIOD  &mt RIGHT_SHIFT SLASH
+&kp ESC           &kp LEFT_WIN    &MOD_EISU_ESC LEFT_ALT 0  &mt LCMD LANGUAGE_2  &lt 1 SPACE  &mt LCTRL TAB       &mt RSHIFT BACKSPACE  &lt 2 ENTER                                                &kp DEL
             >;
 
             sensor-bindings = <&ENC_MOUSE>;
@@ -180,10 +181,10 @@
 
         MOUSE_BK {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans                  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans                  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &LMT 5 MB2  &mkp MB3
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                            &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
     };
